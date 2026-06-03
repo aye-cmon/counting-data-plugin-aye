@@ -1,0 +1,146 @@
+.category {
+  font-family: Spartan;
+  color: #05445e;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 32px 0 16px;
+  padding-left: 100px;
+}
+
+.category::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #05445e;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  margin-left: 400px;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: statSlideIn 0.5s ease forwards;
+}
+.item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+@keyframes statSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 360px) {
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.circle {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #05445e, #5e8ab4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(13, 36, 64, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+.circle::before {
+  content: "";
+  position: absolute;
+  /*inset: 0;*/
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 60%
+  );
+  border-radius: 50%;
+}
+
+.circle span {
+  font-family: Spartan;
+  font-size: 20px;
+  color: #e7f3ff;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.desc {
+  font-family: Spartan;
+  color: #05445e;
+  font-size: 20px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .category {
+    padding-left: 16px !important;
+  }
+
+  .category::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle span {
+    font-size: 1.1rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+}
