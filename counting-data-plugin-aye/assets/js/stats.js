@@ -36,7 +36,7 @@ var observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0 },
+  { threshold: 0.3 },
 );
 
 document.addEventListener("DOMContentLoaded", function () {
