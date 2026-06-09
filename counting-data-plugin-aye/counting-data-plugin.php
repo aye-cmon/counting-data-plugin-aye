@@ -1,9 +1,9 @@
 <?php
-/*
-Plugin Name: Counting Data Plugin Aye
-Description: A plugin to create animated statistics with categories and items.
-Version: 1.0
-*/
+/**
+ * Plugin Name: Counting Data Plugin Aye
+ * Description: A plugin to create animated statistics with categories and items.
+ * Version: 1.0
+ */
 defined('ABSPATH') || exit;
 
 add_action('wp_enqueue_scripts', 'counting_data_plugin_enqueue_scripts');
@@ -15,7 +15,7 @@ if (!function_exists('counting_data_plugin_enqueue_scripts')):
     function counting_data_plugin_enqueue_scripts()
     {
         wp_enqueue_style('counting-data-plugin', plugin_dir_url(__FILE__) . 'assets/css/style.css');
-        wp_enqueue_script('counting-data-plugin', plugin_dir_url(__FILE__) . 'assets/js/script.js', array(), 1.0, true);
+        wp_enqueue_script('counting-data-plugin', plugin_dir_url(__FILE__) . 'assets/js/stats.js', array(), 1.0, true);
     }
 endif;
 //WPBakery element mapping
@@ -47,6 +47,7 @@ if (!function_exists('counting_data_plugin')):
                             'heading' => 'Target Number',
                             'param_name' => 'target_number',
                             'admin_label' => true,
+                            'value' => '',
                             'description' => 'Numbers only e.g. 15500 or 58',
                         ),
                         array(
@@ -82,6 +83,7 @@ if (!function_exists('counting_data_plugin_shortcode')):
         ), $atts);
 
         $items = vc_param_group_parse_atts($atts['items']);
+        error_log(print_r($items, true)); 
 
         if (empty($items)) {
             return '<p style="color: red;">Counting data: please add at least one item</p>';

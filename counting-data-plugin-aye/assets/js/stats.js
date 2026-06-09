@@ -36,9 +36,11 @@ var observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.3 },
+  { threshold: 0 },
 );
 
-document.querySelectorAll(".counter").forEach(function (el) {
-  observer.observe(el);
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".counter").forEach(function (el) {
+    observer.observe(el);
+  });
 });
