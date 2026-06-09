@@ -27,7 +27,7 @@ if (!function_exists('counting_data_plugin')):
             'base' => 'counting_data_plugin',
             'category' => 'Content',
             'description' => 'Animated statistic with categories and items',
-            'icon' => plugin_dir_url(__FILE__) . 'assets/images/icon.png',
+            'icon' => plugin_dir_url(__FILE__) . 'assets/images/icon.svg',
             'params' => array(
                 array(
                     'type' => 'param_group',
