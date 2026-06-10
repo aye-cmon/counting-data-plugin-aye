@@ -14,7 +14,7 @@ add_shortcode('counting_data_plugin', 'counting_data_plugin_shortcode');
 if (!function_exists('counting_data_plugin_enqueue_scripts')):
     function counting_data_plugin_enqueue_scripts()
     {
-        wp_enqueue_style('counting-data-plugin', plugin_dir_url(__FILE__) . 'assets/css/style.css');
+        wp_enqueue_style('counting-data-plugin', plugin_dir_url(__FILE__) . 'assets/css/stats.css');
         wp_enqueue_script('counting-data-plugin', plugin_dir_url(__FILE__) . 'assets/js/stats.js', array(), 1.0, true);
     }
 endif;
