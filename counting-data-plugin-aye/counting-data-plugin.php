@@ -2,6 +2,7 @@
 /**
  * Plugin Name: Counting Data Plugin Aye
  * Description: A plugin to create animated statistics with categories and items.
+ * Author: Aye Chan Mon
  * Version: 1.0
  */
 defined('ABSPATH') || exit;
