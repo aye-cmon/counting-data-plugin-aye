@@ -6,7 +6,7 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin: 32px 0 16px;
-  padding-left: 100px;
+  padding-left: 400px;
 }
 
 .category::after {
@@ -29,7 +29,8 @@
   transform: translateX(-20px);
   animation: statSlideIn 0.5s ease forwards;
 }
-.item:nth-child(1) {
+
+/* .item:nth-child(1) {
   animation-delay: 0.1s;
 }
 .item:nth-child(2) {
@@ -49,7 +50,7 @@
 }
 .item:nth-child(7) {
   animation-delay: 0.7s;
-}
+} */
 
 @keyframes statSlideIn {
   to {
@@ -70,7 +71,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #05445e, #5e8ab4);
+  background:  #5e8ab4;
   display: flex;
   align-items: center;
   justify-content: center;

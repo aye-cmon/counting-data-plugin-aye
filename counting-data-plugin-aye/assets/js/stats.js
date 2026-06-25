@@ -40,6 +40,9 @@ var observer = new IntersectionObserver(
 );
 
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.item').forEach((el, i) => {
+  el.style.setProperty('--i', i + 1);
+  });
   document.querySelectorAll(".counter").forEach(function (el) {
     observer.observe(el);
   });
