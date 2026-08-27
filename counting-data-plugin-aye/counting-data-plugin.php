@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Counting Data Plugin Aye
+ * Plugin Name: HSA Counting Data Plugin
  * Description: A plugin to create animated statistics with categories and items.
  * Author: Aye Chan Mon
  * Version: 2.0.0
